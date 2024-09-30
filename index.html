@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkyDive - Learn and practice skydiving techniques with tutorials, videos, and interactive simulations.">
+    <title>SkyDive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-logo">SkyDive</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#simulations">Simulations</a></li>
+                <li><a href="#progress">Progress</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- Mobile Menu Icon (Hamburger) -->
+            <div class="mobile-menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+    </header>
+
+    
+    
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Master the Art of Skydiving</h2>
+            <p>Learn step-by-step techniques, watch tutorials, and track your progress. Skydiving made easy for everyone!</p>
+            <a href="#tutorials" class="btn">Start Learning</a>
+        </div>
+    </section>
+
+    <section id="tutorials" class="tutorials-section">
+        <div class="container">
+            <h2>Skydiving Tutorials</h2>
+            <p>Learn skydiving step-by-step with our expertly crafted guides and video lessons.</p>
+    
+            <center><div class="tutorial-grid">
+                <!-- Tutorial 1 -->
+                <div class="tutorial-card">
+                    <h3>Basic Freefall Techniques</h3>
+                    <p>Master the basics of skydiving freefall with this introductory guide.</p>
+                    <video controls>
+                        <source src="./Becoming a skydiver _ Spinning out of control _ Freefall course demonstration.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+    
+                <!-- Tutorial 2 -->
+                <div class="tutorial-card">
+                    <h3>Stable Body Positioning</h3>
+                    <p>Learn how to maintain a stable body position during your dive.</p>
+                    <video controls>
+                        <source src="./videoplayback (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+    
+                <!-- Tutorial 3 -->
+                <div class="tutorial-card">
+                    <h3>Advanced Maneuvers</h3>
+                    <p>Take your skills to the next level with advanced skydiving maneuvers.</p>
+                    <video controls>
+                        <source src="./Belly Flying Neutral Position.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            </center>
+        </div>
+    </section>
+
+    <div id="simulations" class="simulator-container" >
+        <hr class="divider">
+        <div class="simulator">
+            Real-time Stimulator
+        </div>
+    </div>
+    
+
+    <div class="simulation-container">
+        
+        <canvas id="skydiver-simulation" width="800" height="600"></canvas>
+        <div class="feedback">
+            <h3>Real-time Feedback:</h3>
+            <p id="feedback-text">Start the simulation and control your skydiver!</p>
+        </div>
+    </div>
+
+    <div id="progress" class="profile-container">
+        <center><h2>User Progress</h2>
+        <div class="user-info">
+            <p><strong>Username:</strong> JohnDoe</p>
+            <p><strong>Completed Tutorials:</strong> 3/5</p>
+        </div>
+        </center>
+    
+        <div class="progress-tracker">
+            <h3>Your Progress</h3>
+            <br>
+            <div class="progress-bar-container">
+                <label for="tutorial1">Tutorial 1</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+    
+                <label for="tutorial2">Tutorial 2</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+    
+                <label for="tutorial3">Tutorial 3</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                
+                <label for="tutorial4">Tutorial 4</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                
+                <label for="tutorial5">Tutorial 5</label>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="recommendations">
+            <h3>Recommended Tutorials</h3>
+            <p><a href="https://youtu.be/GhAjhFoeQzw?si=bhwMwBsBvAY9a__s">Tutorial 4: Advanced Freefall Techniques</a></p>
+            <p><a href="https://youtu.be/YCe5OHjtQF0?si=RdNKeWbQjTncGQI5">Tutorial 5: Group Skydiving Formations</a></p>
+        </div>
+    </div>
+
+
+    <section id="contact" class="get-in-touch-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>We would love to hear from you! Send us a message and we’ll get back to you as soon as possible.</p>
+            <div class="contact-wrapper">
+                <!-- Contact Form Column -->
+                <div class="contact-form-column">
+                    <form id="get-in-touch-form">
+                        <div class="form-group">
+                            
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            
+                            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <!-- Image Column -->
+                <div class="contact-image-column">
+                    <img src="./pexels-tomfisk-11124980.jpg" alt="Contact Us" class="contact-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SkyDive. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="app.js">
+    </script>
+
+</body>
+</html>
